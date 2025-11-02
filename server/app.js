@@ -19,7 +19,7 @@ app.use(cors({
 
 // ✅ Import route modules
 const analyzeRouter = require('./routes/analyze');
-const grammarCheckRoute = require('./routes/grammarCheck');
+const grammarCheckRoute = require('./routes/grammarcheck');
 const spellCheckRoute = require('./routes/spellCheck');
 
 // ✅ Mount routes
