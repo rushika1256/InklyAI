@@ -2,7 +2,7 @@
 
 InklyAI is an intelligent writing companion that helps you improve grammar, fix spelling mistakes, and rephrase text using AI.
 
-Features1:
+Features:
 
 ✅ AI Grammar Correction – Detects and fixes grammatical errors using advanced language models.
 
