@@ -4,6 +4,8 @@ import { FaSpellCheck, FaSyncAlt, FaCheck, FaPencilAlt } from "react-icons/fa";
 import { SiGrammarly } from "react-icons/si";
 import { usePrivy } from "@privy-io/react-auth";
 
+const api = import.meta.env.VITE_API_URL;
+
 const Editor = () => {
   const { getAccessToken } = usePrivy();
   const [text, setText] = useState("");
@@ -32,7 +34,7 @@ const Editor = () => {
     try {
       setLoading((prev) => ({ ...prev, spell: true }));
       const response = await axios.post(
-        "http://localhost:5000/api/spell-check",
+       `${api}/api/spell-check`,
         { text },
         {
           headers: { Authorization: `Bearer ${await getAccessToken()}` },
@@ -51,7 +53,7 @@ const Editor = () => {
     try {
       setLoading((prev) => ({ ...prev, grammar: true }));
       const response = await axios.post(
-        "http://localhost:5000/api/grammar-check",
+        `${api}/api/spell-check`,
         { text }
       );
       setGrammarCheckedText(response.data.correctedText);
@@ -67,7 +69,7 @@ const Editor = () => {
     try {
       setLoading((prev) => ({ ...prev, rephrase: true }));
       const response = await axios.post(
-        "http://localhost:5000/api/analyze",
+        `${api}/api/spell-check`,
         { sentence: selectedSentence },
         {
           headers: { Authorization: `Bearer ${await getAccessToken()}` },

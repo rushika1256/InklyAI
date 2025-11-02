@@ -12,11 +12,15 @@ app.use(express.json());
 
 // ✅ Enable CORS for your React frontend
 app.use(cors({
-  origin: ['http://localhost:5173',  // your React dev server
-  'https://inkly-ai-delta.vercel.app'],
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+    origin: [
+      'http://localhost:5173',                // Local dev
+      'https://inkly-ai-delta.vercel.app',    // Vercel production frontend
+    ],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  }));
+  
 
 // ✅ Import route modules
 const analyzeRouter = require('./routes/analyze');
