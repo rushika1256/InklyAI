@@ -1,28 +1,3 @@
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { PrivyProvider } from "@privy-io/react-auth";
-// import Home from "./components/home";
-// import About from "./components/about";
-// import Editor from "./components/editor";
-// import Navbar from "./components/navbar";
-// import LoginPage from "./components/login";
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <Navbar />
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/about" element={<About />} />
-//         <Route path="/write" element={<Editor />} />
-//         <Route path="/login" element={<LoginPage />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/navbar";

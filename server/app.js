@@ -12,7 +12,8 @@ app.use(express.json());
 
 // ✅ Enable CORS for your React frontend
 app.use(cors({
-  origin: 'http://localhost:5173',  // your React dev server
+  origin: ['http://localhost:5173',  // your React dev server
+  'https://inkly-ai-delta.vercel.app'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));

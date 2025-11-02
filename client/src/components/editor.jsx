@@ -261,6 +261,7 @@ const Button = ({ onClick, children, icon, loading }) => (
 );
 
 
+
 const ResultSection = ({ title, text, onAccept, icon }) => {
   const [visible, setVisible] = useState(true); //  adding local state
 
