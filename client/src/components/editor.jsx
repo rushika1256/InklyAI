@@ -53,7 +53,7 @@ const Editor = () => {
     try {
       setLoading((prev) => ({ ...prev, grammar: true }));
       const response = await axios.post(
-        `${api}/api/spell-check`,
+        `${api}/api/grammar-check`,
         { text }
       );
       setGrammarCheckedText(response.data.correctedText);
@@ -69,7 +69,7 @@ const Editor = () => {
     try {
       setLoading((prev) => ({ ...prev, rephrase: true }));
       const response = await axios.post(
-        `${api}/api/spell-check`,
+        `${api}/api/analyze`,
         { sentence: selectedSentence },
         {
           headers: { Authorization: `Bearer ${await getAccessToken()}` },
